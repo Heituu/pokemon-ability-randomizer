@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemon Randomizer</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
 </head>
 
 <body>
 
-    <form action="{{ url_for('homepage') }}" method="post">
-        <label for="nhab">Número de habilidades:</label><br>
-        <input type="number" id="nhab" name="nhab"><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="container">
 
-    <ul>
-        {%for i in resultado %}
-        <li>{{ i }}</li>
-        {% endfor %}
-    </ul>
+        <form action="{{ url_for('homepage') }}" method="post">
+            <label for="nhab">Número de habilidades:</label><br>
+            <input type="number" id="nhab" name="nhab"><br>
+            <input type="submit" value="Submit">
+        </form>
 
+        <ul>
+            {%for i in resultado %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
 </body>
 
 </html>
