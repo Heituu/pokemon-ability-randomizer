@@ -12,17 +12,22 @@
 
     <div class="container">
 
-        <form action="{{ url_for('homepage') }}" method="post">
-            <label for="nhab">Número de habilidades:</label><br>
-            <input type="number" id="nhab" name="nhab"><br>
-            <input type="submit" value="Submit">
-        </form>
+        <div class="formulario">
+            <form action="{{ url_for('homepage') }}" method="post">
+                <label for="nhab">Escolha o número de habilidades:</label><br>
+                <input type="number" id="nhab" name="nhab"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
 
-        <ul>
+        <div class="results">
+
             {%for i in resultado %}
-            <li>{{ i }}</li>
+            <div class="ability-card">
+                {{ i }}
+            </div>
             {% endfor %}
-        </ul>
+        </div>
 
     </div>
 </body>

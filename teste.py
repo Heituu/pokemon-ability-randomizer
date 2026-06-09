@@ -28,6 +28,7 @@ hab = dados["results"]
 
 abilities = []
 
+
 for i in hab:
     abilities.append(i["name"])
 
