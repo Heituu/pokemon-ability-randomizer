@@ -16,7 +16,9 @@
             <form action="{{ url_for('homepage') }}" method="post">
                 <label for="nhab">Escolha o número de habilidades:</label><br>
                 <input type="number" id="nhab" name="nhab"><br><br>
-                <input type="submit" value="Submit">
+                <button class="scan-button" type="submit" max="3" min="1">
+                    Scan Abilities
+                </button>
             </form>
         </div>
 
